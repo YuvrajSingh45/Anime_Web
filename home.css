@@ -1,0 +1,525 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box
+}
+
+body{
+    font-family:montserrat;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav{
+    /* background: lightblue; */
+    background: none;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+    position: absolute;
+    left: 40px;
+
+}
+
+nav ul{
+    position: absolute;
+    right: 35%;
+    /* float: right; */
+    /* margin-right: 500px; */
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: rgb(168, 166, 166);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.nav-right{
+    position: absolute;
+    right: 20px;
+    /* float: right; */
+}
+
+.nav-right li a{
+    border: solid rgb(168, 166, 166);
+}
+
+.fa-cart-shopping{
+    color: #fff;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.fa-cart-shopping:hover{
+    color: yellow;
+    transition: 0.4s;
+}
+
+/* .navbar li{
+    display: inline-block;
+    margin-left: 20px;
+} */
+
+ul li ul.dropdown li{
+    display: block;
+}
+
+ul  li ul.dropdown{
+    width: 100%;
+    background: black;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    border-radius: 10px;
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+/* .dropdown-li{
+    margin: 5px;
+    line-height: 50px;
+} */
+
+a.active, a.active:hover{
+    background: white;
+    color: black;
+    transition: 0.5s;
+}
+a:hover{
+    /* background: white; */
+    color: white;
+    /* color: black; */
+    transition: 0.5s;
+}
+
+.background-clip{
+    position:absolute;
+    background: cover;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    text-align: center;
+    position: absolute;
+    top: 30%;
+}
+
+.content h1{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+}
+
+.content a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 10px ;
+}
+
+.content p{
+    color: whitesmoke;
+    width: 50%;
+    margin: 1.5em;
+    transform: translateX(50%);
+}
+
+.content a:hover{
+    color: black;
+    background: white;
+}
+
+@media (min-aspect-ratio:16/9){
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.foot-content{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* transform: translateY(140px); */
+
+}
+
+.foot-content h3{
+    /* color: black; */
+    color: #878787;
+}
+
+.foot-content i{
+    /* color: black; */
+    color: #878787;
+    font-size: 20px;
+
+}
+
+.foot-content a{
+    border: none;
+
+}
+
+.foot-content a:hover{
+    background: none;
+    transform: scale(1.15);
+}
+
+.logo-img{
+    width: 65px;
+    height: 65px;
+    margin: 10px;
+    border-radius: 100px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    position: absolute;
+
+}
+
+.section-2{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #FFFBF3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    background-color: #FFFBF3;
+    margin: 10px;
+    padding: 10px;
+    /* font-size: 20px; */
+    border-radius: 20px;
+    position: relative;
+}
+
+.box h1{
+    font-size: 40px;
+}
+
+.container-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin-bottom: 50px;
+}
+
+
+.two{
+    background: url(images/mug-removebg-preview.png) no-repeat center center;
+    background-size: contain;
+    height: 40vh;
+}
+.caption{
+    color: black;
+    /* display: none; */
+    font-size: 23px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0,70px);
+    opacity: 0;
+}
+
+.box:hover .caption{
+    transition: 0.5s;
+    transform: translate(0,50px);
+    /* background-color: rgb(104, 103, 103); */
+    /* box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.6); */
+    opacity: 1;
+}
+.two:hover{
+    transition: 0.5s;
+    background: linear-gradient(rgb(254,251,243,0),rgb(254,251,243,0)),url(images/mug-removebg-preview.png) no-repeat center center;
+    background-size: contain;
+    transform: scale(1.05);
+    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6); */
+    /* display: block; */
+    height: 40vh;
+}
+.three:hover{
+    transition: 0.5s;
+    background: linear-gradient(rgb(254,251,243,0),rgb(254,251,243,0)),url(images/poster.jpeg) no-repeat center center;
+    background-size: contain;
+    transform: scale(1.05);
+    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6); */
+    /* display: block; */
+    height: 40vh;
+}
+.four:hover{
+    transition: 0.5s;
+    background: linear-gradient(rgb(254,251,243,0),rgb(254,251,243,0)),url(images/keychain1-removebg-preview.png) no-repeat center center;
+    background-size: contain;
+    transform: scale(1.05);
+    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6); */
+    /* display: block; */
+    height: 40vh;
+}
+.three{
+    background: url(images/poster.jpeg) no-repeat center center;
+    background-size: contain;
+    height: 40vh;
+}
+.four{
+    background: url(images/keychain1-removebg-preview.png) no-repeat center center;
+    background-size: contain;
+    height: 40vh;
+}
+
+.one{
+    text-align: left;
+    margin-left: 30px;
+}
+
+.one p{
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    /* margin-left: 20px; */
+    position: absolute;
+    top: 65%;
+}
+
+.btn{
+    position: absolute;
+    top: 80%;
+    left: 58%;
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
+    /* margin-top: 50px; */
+    width: 150px;
+    padding: 10px;
+    background-color: #FFC6DC;
+    text-align: center;
+}
+
+
+.section-3{
+    width: 100%;
+    height: 100vh;
+    /* position: relative; */
+    background: #FFFBF3;
+    /* background: #FFC6DC; */
+}
+
+.container-3{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    /* grid-gap: 20px; */
+}
+
+.btn-2{
+    /* position: absolute;
+    top: 80%;
+    left: 58%; */
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
+    margin: 50px;
+    width: 150px;
+    padding: 10px;
+    background-color: #FFC6DC;
+    text-align: center;
+}
+
+.grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    margin:20px;
+    margin-top: 0px;
+    padding: 10px;
+    background-color: #ccc;
+    height: 40vh;
+}
+
+#categories{
+    font-size: 40px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.solo{
+    background: url(images/solo.jpg) no-repeat center;
+    background-size: cover;
+}
+.solo:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/solo.jpg) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.jjk{
+    background:  url(images/jjk.jpg) no-repeat center;
+    background-size: cover;
+    
+}
+.jjk:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/jjk.jpg) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.aot{
+    background: url(images/aot.png) no-repeat center;
+    background-size: cover;
+}
+.aot:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/aot.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.demon-slayer{
+    background: url(images/Demon-Slayer-Kimetsu-no-Yaiba-Official-Poster.png) no-repeat center;
+    background-size: cover;
+}
+.demon-slayer:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/Demon-Slayer-Kimetsu-no-Yaiba-Official-Poster.png) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.naruto{
+    background: url(images/naruto1.jpeg) no-repeat center;
+    background-size: cover;
+}
+.naruto:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/naruto1.jpeg) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.one-piece{
+    background: url(images/one_piece.jpeg) no-repeat center;
+    background-size: cover;
+}
+.one-piece:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/one_piece.jpeg) no-repeat center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.grid p{
+    color: #fff;
+    font-size: 30px;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+.grid:hover p{
+    opacity: 1;
+}
+
+/* .section-4{
+    background-color: #F6F6F8;
+} */
+
+.footer-logo{
+    width: 65px;
+    height: 65px;
+    margin-bottom: 20px;
+    /* margin: 10px; */
+}
+
+footer{
+    /* margin-top: 50px; */
+    padding-top: 50px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color:#F6F6F8 ;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h3{
+    color: #878787;
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+footer p{
+    color: #878787;
+    font-size: 15px;
+    padding-bottom: 7px;
+}
+
+footer h2{
+    color: #878787;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+footer a{
+    color: #878787;
+    margin-bottom: 7px;
+}
+footer a:hover{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: black;
+}
+
+.follow{
+    padding-top:13px ;
+}

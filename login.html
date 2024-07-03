@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://kit.fontawesome.com/5916bba7d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div  class="container1">
+        <nav>
+            <img src="images/logo.jpg" alt="logo" class="logo-img">
+            <label class="logo">anime0y</label>
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li>
+                    <a href="#">Shop</a>
+                    <ul class="dropdown">
+                        <li><a class="dropdown-li" href="#">T-Shirts</a></li>
+                        <li><a class="dropdown-li" href="#">Posters</a></li>
+                        <li><a class="dropdown-li" href="#">Keychains</a></li>
+                        <li><a class="dropdown-li" href="#">Customise your Own!</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="nav-right">
+                <li><a  class="active" href="login.html" target="_blank">Login</a></li>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Sign In</h1>
+        <div class="box">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="Email Address" required><br>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Password" required><br>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember Me</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <a href="#">
+            <center>
+                <button class="btn" onclick="passwordCheck()">Sign In</button>
+            </center>
+        </a>
+        <div class="register-link">
+            <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+    </div>
+
+    <script>
+        let password = document.getElementById('password')
+        
+        function passwordCheck(){
+            console.log(password.value)
+            password = password.value;
+            len = password.length;
+            console.log(len)
+            if(password.length<8){
+                alert("Password must be 8 characters long");
+            }
+            
+            let upperCase = (/[A-Z]/);
+            let  lowerCase = (/[a-z]/);
+            let digits = (/[\d]/);
+            // let specialChar = (/\W/); //The \w metacharacter matches word characters. A word character is a character a-z, A-Z, 0-9, including _ (underscore).
+            let specialChar =(/[.@$!%*#?&_-]/);
+            ct=0;
+            if(specialChar.test(password)){
+                ct++;
+            }
+            else{
+                alert('Password Must contain at least one special character')
+            }
+            if(upperCase.test(password)){
+                ct++;
+            }
+            else{
+                alert('Password Must contain at least one UpperCase character')
+            }
+            if(lowerCase.test(password)){
+                ct++;
+            }
+            else{
+                alert('Password Must contain at least one LowerCase character')
+            }
+            if(digits.test(password)){
+                ct++;
+            }
+            else{
+                alert('Password Must contain at least one Digit')
+            }
+
+            console.log(ct);
+        }
+    </script>
+</body>
+</html>
